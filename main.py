@@ -1,6 +1,5 @@
 
-from PySide2.QtWidgets import QApplication, QDialog
-
+from PySide2.QtWidgets import QApplication
 from mainwindow import MainWindow
 import sys
 
