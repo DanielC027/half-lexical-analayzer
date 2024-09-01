@@ -8,9 +8,7 @@
 !analyzer.py
 
 # example
-!example/
-!example/**/
-!example/screenshot.png
+!/example/
 # --
 !.gitignore
 !README.md
