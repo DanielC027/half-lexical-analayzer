@@ -9,6 +9,9 @@
 
 # example
 !/example/
+!/examples/**
+!/examples/screenshot.png
+!/examples/screenshot_0.png
 # --
 !.gitignore
 !README.md
