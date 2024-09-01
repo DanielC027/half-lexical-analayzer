@@ -8,4 +8,5 @@ This is an app which uses a checkpoint to save what user types on line edit boxe
 ## EXAMPLE
 
 ![Using App](example/screenshot.png)
+![On App](example/screenshot_0.png)
 
