@@ -25,30 +25,43 @@ class MainWindow(QMainWindow):
     @Slot()
     def click_checkPhone(self):
         string = self.ui.lineEdit_phoneNumber.text()
-        print(self.analyzer.analayzer(string))
+        result = self.analyzer.analayzer(string)
+        self.checkValid("phone", result, self.ui.label_validatePhone)
 
     @Slot()
     def click_checkEmail(self):
         string = self.ui.lineEdit_email.text()
-        print(self.analyzer.analayzer(string))
+        result = self.analyzer.analayzer(string)
+        self.checkValid("email", result, self.ui.label_validateEmail)
 
     @Slot()
     def click_checkCurp(self):
         string = self.ui.lineEdit_curp.text()
-        print(self.analyzer.analayzer(string))
+        result = self.analyzer.analayzer(string)
+        self.checkValid("curp", result, self.ui.label_validateCurp)
 
     @Slot()
     def click_checkRfc(self):
-        print("rfc")
         string = self.ui.lineEdit_rfc.text()
-        print(self.analyzer.analayzer(string))
+        result = self.analyzer.analayzer(string)
+        self.checkValid("rfc", result, self.ui.label_validateRfc)
 
     @Slot()
     def click_checkIpv4(self):
         string = self.ui.lineEdit_ipv4.text()
-        print(self.analyzer.analayzer(string))
+        result = self.analyzer.analayzer(string)
+        self.checkValid("ipv4", result, self.ui.label_validateIpv4)
 
     @Slot()
     def click_checkBirthday(self):
         string = self.ui.lineEdit_birthday.text()
-        print(self.analyzer.analayzer(string))
+        result = self.analyzer.analayzer(string)
+        self.checkValid("birth", result, self.ui.label_validateBirth)
+
+    def checkValid(self, type_s, result, label):
+        if type_s == result:
+            label.setText("Válida")
+            label.setStyleSheet("color: green;")
+        else:
+            label.setText("NO válida")
+            label.setStyleSheet("color: red;")

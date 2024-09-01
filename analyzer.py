@@ -26,6 +26,3 @@ class Analayzer:
             return "birth"
         else:
             return "nothing"
-
-
-print(Analayzer().analayzer("31/01/19"))
