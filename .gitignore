@@ -10,7 +10,7 @@
 # example
 !example/
 !example/**/
-
+!example/screenshot.png
 # --
 !.gitignore
 !README.md
