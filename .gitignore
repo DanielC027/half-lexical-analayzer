@@ -7,5 +7,10 @@
 !main_window_ui.py
 !analyzer.py
 
+# example
+!example/
+!example/**/
+
+# --
 !.gitignore
 !README.md
