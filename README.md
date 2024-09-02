@@ -3,7 +3,8 @@
 
 ## DESCRIPTION
 
-This is an app which uses a checkpoint to save what user types on line edit boxes, so when user start app again could recover the information he had
+This is an app designed to analyze strings based on lexical analyzer principles. The main goal of this project is to implement a checkpoint system that allows users to restart their session if the app closes unexpectedly.
+
 
 ## EXAMPLE
 
