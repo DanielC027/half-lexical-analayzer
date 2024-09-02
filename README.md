@@ -14,10 +14,10 @@ This is an app which uses a checkpoint to save what user types on line edit boxe
 ![On App](example/closing.png)
 
 ### Choose if restart session
-Question
+#### Question
 ![On App](example/restart_question.png)
 
-Answers:
+### Answers:
 
 #### YES
 ![On App](example/restart_yes_interface.png)
