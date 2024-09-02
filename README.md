@@ -14,12 +14,13 @@ Closing the app
 ![On App](example/closing.png)
 
 Choose if restart session
-YES
-![On App](example/restart_yes_question.png)
+Question
+![On App](example/restart_question.png)
 
+Answers:
+
+YES
 ![On App](example/restart_yes_interface.png)
 
 NO
-![On App](example/restart_yes_question.png)
-
 ![On App](example/restart_no_interface.png)

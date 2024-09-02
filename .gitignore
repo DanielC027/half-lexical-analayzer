@@ -10,8 +10,11 @@
 # example
 !example/
 !example/**/
-!example/screenshot.png
-!example/screenshot_0.png
+!example/first.png
+!example/closing.png
+!example/restart_question.png
+!example/restart_yes_interface.png
+!example/restart_no_interface.png
 
 # example
 !dist/
