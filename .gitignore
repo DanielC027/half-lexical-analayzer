@@ -12,6 +12,11 @@
 !example/**/
 !example/screenshot.png
 !example/screenshot_0.png
+
+# example
+!dist/
+!dist/**/
+!dist/main.exe
 # --
 !.gitignore
 !README.md

@@ -23,6 +23,7 @@ class MainWindow(QMainWindow):
         self.__index_files = {"phone": 0, "email": 1,
                               "curp": 2, "rfc": 3, "ipv4": 4, "birth": 5}
 
+        # When user start app will see if he got an old session
         self.checkSessionExist()
 
         self.ui.pushButton_checkPhone.clicked.connect(self.click_checkPhone)
