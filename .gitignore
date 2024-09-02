@@ -6,7 +6,7 @@
 !mainwindow.py
 !main_window_ui.py
 !analyzer.py
-
+!checkpoint.py
 # example
 !example/
 !example/**/

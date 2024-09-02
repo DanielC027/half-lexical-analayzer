@@ -4,6 +4,7 @@ from PySide2.QtCore import Slot
 from main_window_ui import Ui_MainWindow
 
 from analyzer import Analayzer
+from checkpoint import CheckPoint
 
 
 class MainWindow(QMainWindow):
@@ -14,30 +15,31 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         self.analyzer = Analayzer()
+        self.checkpoint = CheckPoint()
 
         self.ui.pushButton_checkPhone.clicked.connect(self.click_checkPhone)
         self.ui.lineEdit_phoneNumber.textChanged.connect(
-            lambda: self.changingText(self.ui.label_validatePhone))
+            lambda: self.changingText(self.ui.label_validatePhone, "phone.txt", self.ui.lineEdit_phoneNumber.text()))
 
         self.ui.pushButton_checkEmail.clicked.connect(self.click_checkEmail)
         self.ui.lineEdit_email.textChanged.connect(
-            lambda: self.changingText(self.ui.label_validateEmail))
+            lambda: self.changingText(self.ui.label_validateEmail, "email.txt", self.ui.lineEdit_email.text()))
 
         self.ui.pushButton_checkCurp.clicked.connect(self.click_checkCurp)
         self.ui.lineEdit_curp.textChanged.connect(
-            lambda: self.changingText(self.ui.label_validateCurp))
+            lambda: self.changingText(self.ui.label_validateCurp, "curp.txt", self.ui.lineEdit_curp.text()))
 
         self.ui.pushButton_checkRfc.clicked.connect(self.click_checkRfc)
         self.ui.lineEdit_rfc.textChanged.connect(
-            lambda: self.changingText(self.ui.label_validateRfc))
+            lambda: self.changingText(self.ui.label_validateRfc, "rfc.txt", self.ui.lineEdit_rfc.text()))
 
         self.ui.pushButton_checkIpv4.clicked.connect(self.click_checkIpv4)
         self.ui.lineEdit_ipv4.textChanged.connect(
-            lambda: self.changingText(self.ui.label_validateIpv4))
+            lambda: self.changingText(self.ui.label_validateIpv4, "ipv4.txt", self.ui.lineEdit_ipv4.text()))
 
         self.ui.pushButton_checkBirth.clicked.connect(self.click_checkBirthday)
         self.ui.lineEdit_birthday.textChanged.connect(
-            lambda: self.changingText(self.ui.label_validateBirth))
+            lambda: self.changingText(self.ui.label_validateBirth, "birth.txt", self.ui.lineEdit_birthday.text()))
 
     @Slot()
     def click_checkPhone(self):
@@ -83,6 +85,7 @@ class MainWindow(QMainWindow):
             label.setText("NO válida")
             label.setStyleSheet("color: red;")
 
-    def changingText(self, label):
+    def changingText(self, label, file_name, content):
         label.setText("-")
         label.setStyleSheet("color: black;")
+        self.checkpoint.setContent(file_name, content)
