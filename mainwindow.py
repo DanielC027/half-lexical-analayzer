@@ -16,11 +16,28 @@ class MainWindow(QMainWindow):
         self.analyzer = Analayzer()
 
         self.ui.pushButton_checkPhone.clicked.connect(self.click_checkPhone)
+        self.ui.lineEdit_phoneNumber.textChanged.connect(
+            lambda: self.changingText(self.ui.label_validatePhone))
+
         self.ui.pushButton_checkEmail.clicked.connect(self.click_checkEmail)
+        self.ui.lineEdit_email.textChanged.connect(
+            lambda: self.changingText(self.ui.label_validateEmail))
+
         self.ui.pushButton_checkCurp.clicked.connect(self.click_checkCurp)
+        self.ui.lineEdit_curp.textChanged.connect(
+            lambda: self.changingText(self.ui.label_validateCurp))
+
         self.ui.pushButton_checkRfc.clicked.connect(self.click_checkRfc)
+        self.ui.lineEdit_rfc.textChanged.connect(
+            lambda: self.changingText(self.ui.label_validateRfc))
+
         self.ui.pushButton_checkIpv4.clicked.connect(self.click_checkIpv4)
+        self.ui.lineEdit_ipv4.textChanged.connect(
+            lambda: self.changingText(self.ui.label_validateIpv4))
+
         self.ui.pushButton_checkBirth.clicked.connect(self.click_checkBirthday)
+        self.ui.lineEdit_birthday.textChanged.connect(
+            lambda: self.changingText(self.ui.label_validateBirth))
 
     @Slot()
     def click_checkPhone(self):
@@ -65,3 +82,7 @@ class MainWindow(QMainWindow):
         else:
             label.setText("NO válida")
             label.setStyleSheet("color: red;")
+
+    def changingText(self, label):
+        label.setText("-")
+        label.setStyleSheet("color: black;")
