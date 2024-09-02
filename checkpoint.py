@@ -30,6 +30,13 @@ class CheckPoint:
         except Exception as ex:
             print("checkpoint/setContent: ", ex)
 
+    def clearContent(self, file_name):
+        try:
+            with open(file_name, 'w') as file:
+                file.write("")
+
+        except Exception as ex:
+            print("checkpoint/clearContent: ", ex)
 
 # print(CheckPoint().haveContent("nada.txt"))
 # print("->", CheckPoint().getContent("nada.txt"), "<-")
