@@ -5,22 +5,22 @@
 
 This is an app which uses a checkpoint to save what user types on line edit boxes, so when user start app again could recover the information he had
 
-### EXAMPLE
+## EXAMPLE
 
-First time using the app
+### First time using the app
 ![Using App](example/first.png)
 
-Closing the app
+### Closing the app
 ![On App](example/closing.png)
 
-Choose if restart session
+### Choose if restart session
 Question
 ![On App](example/restart_question.png)
 
 Answers:
 
-YES
+#### YES
 ![On App](example/restart_yes_interface.png)
 
-NO
+#### NO
 ![On App](example/restart_no_interface.png)
